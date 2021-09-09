@@ -34,8 +34,8 @@ def recurse(tik, baseSize, red, green, blue, xpos, ypos):
         return
     else:
         tik -= 1
-        recurse(tik, baseSize*.5, red, green+10, blue, )
-        recurse(tik, baseSize*.5, red, green+10, blue, )
+        recurse(tik, baseSize*.5, red, green+10, blue, xpos, ypos)
+        recurse(tik, baseSize*.5, red, green+10, blue, xpos, ypos)
 
 kingTurt.penup()
 kingTurt.setposition(0, -400)
