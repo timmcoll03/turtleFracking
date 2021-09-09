@@ -1,4 +1,5 @@
 from turtle import *
+import random
 kick=5
 
 screen = Screen()
@@ -48,15 +49,14 @@ def snowflake(size,spindle, angle):
         kingTurt.seth((360/spindle)*quant)
         tree(5,size,angle)
         
-goto(100,-200)
-tree(kick,50,45)
-goto(-200,-175)
-tree(kick,70,10)
-goto(0,100)
-snowflake(15,5,30)
 
 
+for snow in range (5):
+    for snowy in range (6):
+        goto(random.randint(-500, 500),random.randint(150,300))
 
+
+        snowflake(random.randint(15,18),random.randint(2,5),30)
 
 
 
