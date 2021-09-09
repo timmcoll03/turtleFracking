@@ -1,5 +1,5 @@
 from turtle import *
-
+kick=5
 
 screen = Screen()
 screen.setup(1000, 1000)
@@ -11,38 +11,49 @@ kingTurt.shape("turtle")
 kingTurt.resizemode("auto")
 kingTurt.width(3)
 kingTurt.pencolor("blue")
-kingTurt.speed(2)
-#screen.tracer(0)
-
+kingTurt.speed(0)
+screen.tracer(0)
 
 
 
 
         
-def stupid_line(length,angle,x,y):
+def stupid_line(length,angle):
     kingTurt.forward(length)
     return
 
+def goto(x,y):
+    kingTurt.penup()
+    kingTurt.goto(x,y)
+    kingTurt.pendown()
 
 
-kick=5
 kingTurt.seth(90)
-def tree(kick,length,angle,xpos,ypos):
+def tree(kick,length,angle):
+    
     if kick>=0:
         kick-=1
-        stupid_line(length,angle,xpos,ypos)
+        stupid_line(length,angle)
         new_length=length-5
         kingTurt.left(angle)
-        tree(kick, new_length,angle,xpos,ypos)
+        tree(kick, new_length,angle)
         kingTurt.right(angle*2)
-        tree(kick, new_length,angle,xpos,ypos)
+        tree(kick, new_length,angle)
         kingTurt.left(angle)
         kingTurt.backward(length)
-        
-
         return
-tree(kick,50,30,25,-200)
     
+def snowflake(size,spindle, angle):
+    for quant in range(spindle):
+        kingTurt.seth((360/spindle)*quant)
+        tree(5,size,angle)
+        
+goto(100,-200)
+tree(kick,50,45)
+goto(-200,-175)
+tree(kick,70,10)
+goto(0,100)
+snowflake(15,5,30)
 
 
 
@@ -51,7 +62,7 @@ tree(kick,50,30,25,-200)
 
 
 
-#screen.update()
+screen.update()
 
 
 h=input("") 
