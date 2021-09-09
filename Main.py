@@ -13,7 +13,7 @@ kingTurt.width(3)
 kingTurt.pencolor("blue")
 kingTurt.speed(0)
 #screen.tracer(0)
-
+penis="pemis"
 def line(length, direction):
     #kingTurt.setheading(direction)
     kingTurt.left(direction)
