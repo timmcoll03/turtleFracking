@@ -11,7 +11,7 @@ kingTurt.shape("turtle")
 kingTurt.resizemode("auto")
 kingTurt.width(3)
 kingTurt.pencolor("blue")
-kingTurt.speed(0)
+kingTurt.speed(2)
 #screen.tracer(0)
 
 
@@ -29,6 +29,7 @@ kick=5
 kingTurt.seth(90)
 def tree(kick,length,angle,xpos,ypos):
     if kick>=0:
+        kick-=1
         stupid_line(length,angle,xpos,ypos)
         new_length=length-5
         kingTurt.left(angle)
@@ -37,10 +38,10 @@ def tree(kick,length,angle,xpos,ypos):
         tree(kick, new_length,angle,xpos,ypos)
         kingTurt.left(angle)
         kingTurt.backward(length)
-        kick-=1
+        
 
         return
-tree(kick,100,30,25,60)
+tree(kick,50,30,25,-200)
     
 
 
