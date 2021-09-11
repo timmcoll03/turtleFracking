@@ -109,6 +109,114 @@ for cloud in range(12):
     kingTurt.circle(100,360)
     kingTurt.pensize(1)
 
+#draws each brick
+kingTurt.setheading(180)
+
+def brick(xLoc, yLoc):
+    kingTurt.color("maroon")
+    kingTurt.pencolor("white")    
+    kingTurt.up()
+    kingTurt.goto(xLoc, yLoc)
+    kingTurt.down()
+    kingTurt.begin_fill()
+    for rectangle in range(2):
+        kingTurt.forward(30)
+        kingTurt.right(90)
+        kingTurt.forward(15)
+        kingTurt.right(90)
+    kingTurt.end_fill()
+
+#draws rows of bricks
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -400)
+    xLoc = xLoc - 30
+
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -385)
+    xLoc = xLoc - 30
+
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -370)
+    xLoc = xLoc - 30
+
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -355)
+    xLoc = xLoc - 30
+
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -340)
+    xLoc = xLoc - 30
+
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -325)
+    xLoc = xLoc - 30
+
+xLoc = 430
+for number in range(5):
+    brick(xLoc, -310)
+    xLoc = xLoc - 30
+   
+#draws chimney
+kingTurt.penup()
+kingTurt.color("sienna")
+kingTurt.pencolor("saddle brown")
+kingTurt.goto(400,-280)
+kingTurt.pendown()
+kingTurt.begin_fill()
+kingTurt.setheading(90)
+for chimney in range(2):
+    kingTurt.forward(75)
+    kingTurt.right(90)
+    kingTurt.forward(30)
+    kingTurt.right(90)
+kingTurt.end_fill()
+
+#draws roof
+kingTurt.penup()
+kingTurt.color("saddle brown")
+kingTurt.pencolor("sienna")
+kingTurt.goto(450,-295)
+kingTurt.pendown()
+kingTurt.begin_fill()
+kingTurt.setheading(135)
+kingTurt.forward(math.sqrt(18050))
+kingTurt.left(90)
+kingTurt.forward(math.sqrt(18050))
+kingTurt.setheading(0)
+kingTurt.forward(190)
+kingTurt.end_fill()
+
+#draws door
+kingTurt.penup()
+kingTurt.color("sienna")
+kingTurt.pencolor("saddle brown")
+kingTurt.goto(340, -400)
+kingTurt.pendown()
+kingTurt.begin_fill()
+for door in range(2):
+        kingTurt.forward(30)
+        kingTurt.left(90)
+        kingTurt.forward(50)
+        kingTurt.left(90)
+kingTurt.end_fill()
+
+#draws door handle
+kingTurt.penup()
+kingTurt.color("gold")
+kingTurt.pencolor("goldenrod")
+kingTurt.goto(362, -380)
+kingTurt.pendown()
+kingTurt.begin_fill()
+kingTurt.circle(2.5)
+kingTurt.end_fill()
+
+
 #Cleanup Code and KillSwitch for running in IDEs other than Thonny
 screen.update()
 hideturtle()
