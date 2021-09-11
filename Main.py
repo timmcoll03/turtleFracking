@@ -17,9 +17,6 @@ kingTurt.pencolor("blue")
 kingTurt.speed(0)
 screen.tracer(0)
 
-
-
-
         
 def stupid_line(length,angle):
     kingTurt.forward(length)
@@ -32,9 +29,9 @@ def goto(x,y):
 
 
 kingTurt.seth(90)
-def tree(kick,length,angle):
-    
+def tree(kick,length,angle):    
     if kick>=0:
+        
         kick-=1
         stupid_line(length,angle)
         new_length=length-5
@@ -51,8 +48,7 @@ def snowflake(size,spindle, angle):
         kingTurt.seth((360/spindle)*quant)
         tree(5,size,angle)
         
-for line in range(1000):
-    goto(-500,-450)
+
    
 
 for snow in range (8):
@@ -72,7 +68,13 @@ for line in range(1000):
     y = (3*math.sin(.04*x))-400
     kingTurt.pendown()
 
+kingTurt.seth(90)
+goto(0,-400)
+
+#tree(15, 80, 20)
+
 screen.update()
+hideturtle()
 
 
 h=input("") 
