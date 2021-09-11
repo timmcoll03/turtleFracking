@@ -101,7 +101,6 @@ for line in range(1000):
     y = (3*math.sin(.04*x))-400
     kingTurt.pendown()
 
-
 #Cloud Creation
 kingTurt.pencolor("grey")
 for cloud in range(12):
